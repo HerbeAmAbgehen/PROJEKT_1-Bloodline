@@ -146,7 +146,7 @@ Shader "SyntyStudios/Prototype_Global"
 		}
 	}
 	Fallback "Diffuse"
-	CustomEditor "UnityEditorASEMaterialInspector"
+	CustomEditor "ASEMaterialInspector"
 }
 /*ASEBEGIN
 Version=15900
