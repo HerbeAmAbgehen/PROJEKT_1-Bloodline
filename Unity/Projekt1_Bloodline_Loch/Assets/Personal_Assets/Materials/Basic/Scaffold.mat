@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Scaffold
-  m_Shader: {fileID: -6465566751694194690, guid: f26ede22b8c4e0046ae92bc8f2f00b6c, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cee9e97adebf3ce4ca582022ef50fcba, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -67,6 +67,18 @@ Material:
         m_Texture: {fileID: 2800000, guid: e762598844ef5064c99761007b48aaa9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
@@ -85,6 +97,8 @@ Material:
     - _OcclusionStrength: 1
     - _OverlayAmount: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -92,10 +106,37 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 1
+    - _smoothness: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Scale: {r: 0.25, g: 0.25, b: 0, a: 0}
+    - _Scale: {r: 0.125, g: 0.125, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &2192289767350337083
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!114 &3082408401904671001
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
