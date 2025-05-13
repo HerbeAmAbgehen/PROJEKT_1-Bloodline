@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GREYBOX/Scenes/Old_Library_Greybox.unity
+    guid: 40e8f24f7765a5d4681fd71aca4227a9
+  - enabled: 1
+    path: Assets/GREYBOX/Scenes/Barracks_Dungeons_Greybox.unity
+    guid: 0d8d94cc7c084794cae33eacb640b924
+  - enabled: 1
+    path: Assets/GREYBOX/Scenes/Church_Plaza_Greybox.unity
+    guid: c2151566ead81704bbd403b5ef5eac69
+  - enabled: 1
+    path: Assets/GREYBOX/Scenes/City_Outskirts_GREYBOX.unity
+    guid: 19376382d9f348043993908f0dd789ae
+  - enabled: 1
+    path: Assets/GREYBOX/Scenes/GreatHall_Greybox.unity
+    guid: aae8f05307a91034d82068117cc6517b
+  - enabled: 1
+    path: Assets/GREYBOX/Scenes/Lower_City_Greybox.unity
+    guid: df71243162429af4d9b5ca989e87450f
+  - enabled: 1
+    path: Assets/GREYBOX/Scenes/Sewers_Greybox.unity
+    guid: c6571804346ef1449b242459cc558522
   m_configObjects: {}
