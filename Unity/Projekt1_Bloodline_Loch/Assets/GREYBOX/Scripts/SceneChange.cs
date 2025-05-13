@@ -10,27 +10,29 @@ public class SceneChange : MonoBehaviour
 
     public GameObject InteractionText;
 
-
+    private bool PlayerCollision;
     private void Start()
     {
         InteractionText.SetActive(false);
+        PlayerCollision = false;
     }
 
     private void OnTriggerEnter(Collider collider)
     {
         InteractionText.SetActive(true);
-        
+        PlayerCollision = true;
 
     }
 
     private void OnTriggerExit(Collider collider)
     {
         InteractionText.SetActive(false);
+        PlayerCollision = false;
     }
 
     private void Update()
     {
-        if (InteractionText.activeSelf == true && Input.GetKeyDown(KeyCode.E))
+        if (PlayerCollision && Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene(scene);
         }
