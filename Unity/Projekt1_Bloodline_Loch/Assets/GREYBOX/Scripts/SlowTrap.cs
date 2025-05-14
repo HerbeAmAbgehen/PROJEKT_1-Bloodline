@@ -10,7 +10,13 @@ public class SlowTrap : MonoBehaviour
     
     public float StunTime;
 
+    public float ArmsSpeed;
+
+    public GameObject TrapArms;
+
     private GameObject playerGO;
+
+    private BoxCollider ArmsCollider;
     
     private FirstPersonController playerFPC;
 
@@ -18,6 +24,12 @@ public class SlowTrap : MonoBehaviour
 
     private float defaultSprintSpeed;
 
+    private bool PlayerCollision = false;
+
+    private bool ArmsWait = false;
+
+    private float ArmsRestPositionX;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +37,15 @@ public class SlowTrap : MonoBehaviour
 
         playerFPC = playerGO.GetComponent<FirstPersonController>();
 
+        ArmsCollider = TrapArms.GetComponent<BoxCollider>();
+
         defaultMoveSpeed = playerFPC.MoveSpeed;
 
         defaultSprintSpeed = playerFPC.SprintSpeed;
+
+        ArmsRestPositionX = TrapArms.transform.position.x;
+
+        TrapArms.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,7 +53,8 @@ public class SlowTrap : MonoBehaviour
     {
 
         StartCoroutine(StunTimer());
-        
+        PlayerCollision = true;
+        ArmsWait = true;
     }
 
     private void OnTriggerExit(Collider collider)
@@ -43,18 +62,43 @@ public class SlowTrap : MonoBehaviour
         playerFPC.MoveSpeed = defaultMoveSpeed;
 
         playerFPC.SprintSpeed = defaultSprintSpeed;
+
+        PlayerCollision = false;
+
+        TrapArms.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (ArmsWait && (TrapArms.transform.position.x < ArmsRestPositionX + ArmsCollider.size.y))
+        {
+            
+            TrapArms.transform.Translate(Vector3.down * Time.deltaTime * ArmsSpeed);
+        }
+        else if (!ArmsWait && TrapArms.transform.position.x > ArmsRestPositionX)
+        {
+            TrapArms.transform.Translate(Vector3.down * Time.deltaTime * -0.01f* ArmsSpeed);
+        }
+        else if (TrapArms.transform.position.x == ArmsRestPositionX-0.1f)
+        {
+            TrapArms.SetActive(false);
+        }
+        
+
+        
+    }
     private IEnumerator StunTimer()
     {
         playerFPC.MoveSpeed = 0;
         playerFPC.SprintSpeed = 0;
-
-        yield return new WaitForSeconds(StunTime);
         
+        TrapArms.SetActive(true);
+        yield return new WaitForSeconds(StunTime);
+        ArmsWait = false;
         playerFPC.MoveSpeed = defaultMoveSpeed * speedMult;
         playerFPC.SprintSpeed = defaultSprintSpeed * speedMult;
     }
+
 
 
 
