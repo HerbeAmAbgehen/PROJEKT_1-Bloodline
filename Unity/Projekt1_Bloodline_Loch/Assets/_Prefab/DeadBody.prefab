@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9024075557443490356}
   - component: {fileID: 9218142712421740964}
   - component: {fileID: -2825781657155139444}
+  - component: {fileID: -4254741243315034528}
   m_Layer: 0
   m_Name: DeadBody
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: -0.000000059604645}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -105,3 +106,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019891188, y: 0.0024675496, z: 0.0073318053}
   m_Center: {x: -0.00048274128, y: 0.00096495065, z: 0.000028728158}
+--- !u!64 &-4254741243315034528
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159616923864627419}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5527088422190812150, guid: 5360c1b8e6985094cbb3ca15fb7faf85, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 576277665793764590}
   - component: {fileID: 4947375152523171471}
   - component: {fileID: 6193969435958327214}
-  - component: {fileID: -6944667875089692888}
+  - component: {fileID: -5492274227204205115}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0.10000001}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-6944667875089692888
-MeshCollider:
+--- !u!65 &-5492274227204205115
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,7 +102,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1578207650738979403, guid: f5f95f5f7ded6de43b14d1042564c412, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.0016115102, y: 0.001006781, z: 0.00080401823}
+  m_Center: {x: -0.0000040557607, y: 0.00049839146, z: -0.0000027638673}

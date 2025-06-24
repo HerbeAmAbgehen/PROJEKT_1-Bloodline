@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6685298570458146486}
   - component: {fileID: 6956632272211163643}
   - component: {fileID: -9002551213173098184}
+  - component: {fileID: 3506204295161439816}
   m_Layer: 0
   m_Name: Bench
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: -0.00000011920929}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,5 +104,26 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0053274888, y: 0.00806512, z: 0.015000001}
-  m_Center: {x: 0.0026637444, y: 0.0039835223, z: -0.0074999994}
+  m_Size: {x: 0.0053274888, y: 0.003800787, z: 0.015}
+  m_Center: {x: 0.0026637444, y: 0.0018513586, z: -0.0075}
+--- !u!65 &3506204295161439816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462283593919362147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.000752241, y: 0.00806512, z: 0.015}
+  m_Center: {x: 0.004951357, y: 0.0039835223, z: -0.0075}
