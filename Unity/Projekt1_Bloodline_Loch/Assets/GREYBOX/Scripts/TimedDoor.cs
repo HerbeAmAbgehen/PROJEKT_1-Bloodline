@@ -12,9 +12,11 @@ public class TimedDoor : MonoBehaviour
 
     public int DoorOpenTime;
 
+    public float OpenXPosition;
+
     private float ClosedXPosition;
 
-    private float OpenXPosition;
+    
 
     private BoxCollider DoorCollider;
 
@@ -29,10 +31,9 @@ public class TimedDoor : MonoBehaviour
         DoorOpen = false;
         PlayerCollision = false;
         ClosedXPosition = Door.transform.position.x;
-        OpenXPosition = Door.transform.position.x - DoorCollider.size.x;
 
         Debug.Log(Door.transform.position.x);
-        Debug.Log(DoorCollider.size.x);
+        Debug.Log(DoorCollider.size.z);
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -55,11 +56,11 @@ public class TimedDoor : MonoBehaviour
 
         if (DoorOpen && Door.transform.position.x > OpenXPosition)
         {
-            Door.transform.Translate(Vector3.left * Time.deltaTime * slideSpeed);
+            Door.transform.Translate(Vector3.forward * Time.deltaTime * slideSpeed);
         }
         else if (!DoorOpen && Door.transform.position.x < ClosedXPosition)
         {
-            Door.transform.Translate(Vector3.left * Time.deltaTime * -slideSpeed);
+            Door.transform.Translate(Vector3.forward * Time.deltaTime * -slideSpeed);
         }
     }
 
