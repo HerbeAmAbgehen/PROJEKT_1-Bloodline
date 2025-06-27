@@ -24661,8 +24661,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 347172732987224811, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1550239739}
+    - targetCorrespondingSourceObject: {fileID: 347172732987224811, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1550239738}
   m_SourcePrefab: {fileID: 100100000, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
+--- !u!1 &1550239737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 347172732987224811, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
+  m_PrefabInstance: {fileID: 1550239736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1550239738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550239737}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0117005175, y: 0.026843041, z: 0.044999994}
+  m_Center: {x: -0.0048502567, y: 0.013421521, z: -2.3028704e-15}
+--- !u!114 &1550239739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550239737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eab1e358a13f24ca22dd5c748ab736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: Church_Plaza_Greybox
+  InteractionText: {fileID: 305278881}
 --- !u!1 &1552770577
 GameObject:
   m_ObjectHideFlags: 0
