@@ -20,6 +20,8 @@ public class PatCat : MonoBehaviour
     private Animator Animator;
     private Animator ArmAnimator;
 
+    private MeshRenderer ArmMesh;
+
     private CharacterController PC;
     
     private float PlayerRotation = 268.5f;
@@ -33,8 +35,9 @@ public class PatCat : MonoBehaviour
         Animator = GetComponent<Animator>();
         ArmAnimator = Arm.GetComponent<Animator>();
         PC = Player.GetComponent<CharacterController>();
+        ArmMesh = Arm.GetComponent<MeshRenderer>();
 
-        Arm.gameObject.SetActive(false);
+        ArmMesh.enabled = false;
         InvokeRepeating("PlayScratch", 15, 25);
 
         IsScratching = false;
@@ -79,13 +82,12 @@ public class PatCat : MonoBehaviour
     {
         
         CanBePatted=false;
-        Arm.gameObject.SetActive(true);
+        ArmMesh.enabled = true;
         Animator.SetTrigger("Pat");
-        yield return new WaitForSeconds(2f);
         ArmAnimator.SetTrigger("Pat");
         yield return new WaitForSeconds(ArmPat.length);
         ArmAnimator.SetTrigger("Idle");
-        Arm.gameObject.SetActive(false);
+        ArmMesh.enabled=false;
         yield return new WaitForSeconds(Pat.length - ArmPat.length);
         Animator.SetTrigger("Idle");
         PC.gameObject.SetActive(true);
