@@ -5,25 +5,46 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/GREYBOX/Scenes/City_Outskirts_GREYBOX.unity
     guid: 19376382d9f348043993908f0dd789ae
-  - enabled: 1
+  - enabled: 0
     path: Assets/GREYBOX/Scenes/Sewers_Greybox.unity
     guid: c6571804346ef1449b242459cc558522
-  - enabled: 1
+  - enabled: 0
     path: Assets/GREYBOX/Scenes/Lower_City_Greybox.unity
     guid: df71243162429af4d9b5ca989e87450f
-  - enabled: 1
+  - enabled: 0
     path: Assets/GREYBOX/Scenes/Barracks_Dungeons_Greybox.unity
     guid: 0d8d94cc7c084794cae33eacb640b924
-  - enabled: 1
+  - enabled: 0
     path: Assets/GREYBOX/Scenes/Old_Library_Greybox.unity
     guid: 40e8f24f7765a5d4681fd71aca4227a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/GREYBOX/Scenes/GreatHall_Greybox.unity
     guid: aae8f05307a91034d82068117cc6517b
-  - enabled: 1
+  - enabled: 0
     path: Assets/GREYBOX/Scenes/Church_Plaza_Greybox.unity
     guid: c2151566ead81704bbd403b5ef5eac69
+  - enabled: 1
+    path: Assets/_Scenes/City_Outskirts.unity
+    guid: fa27e5d19302566459e847d7758591ca
+  - enabled: 1
+    path: Assets/_Scenes/Sewers.unity
+    guid: 0bc4e9056d53a7f46be11ef831b1f2c5
+  - enabled: 1
+    path: Assets/_Scenes/Lower_City.unity
+    guid: fe1a5330ed4e87f4a9da3fe9eeec97ae
+  - enabled: 1
+    path: Assets/_Scenes/Barracks_Dungeons.unity
+    guid: 0668289ea5587dd44b092c40f37eea39
+  - enabled: 1
+    path: Assets/_Scenes/Old_Library.unity
+    guid: 5d192c68535e4d64e944ded400d111dc
+  - enabled: 1
+    path: Assets/_Scenes/GreatHall.unity
+    guid: 24277cca3245b3c43bf806cfdb05b70a
+  - enabled: 1
+    path: Assets/_Scenes/Church_Plaza.unity
+    guid: a55b1a2d3525fcf4db16df4a29c04d93
   m_configObjects: {}
