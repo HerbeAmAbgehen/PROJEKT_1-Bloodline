@@ -4817,6 +4817,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlashTime: 0.05
+  FlashMinStrength: 0.3
+  FlashMaxStrength: 0.7
 --- !u!1001 &154273776
 PrefabInstance:
   m_ObjectHideFlags: 0

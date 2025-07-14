@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
-public class LightFlashes : MonoBehaviour
+public class EmissionFlashLight : MonoBehaviour
 {
     public float FlashTime = 0.05f;
 
-    public float FlashMinStrength, FlashMaxStrength;
+    public float FlashStrength;
 
     private Light LightComponent;
 
-    private float LightIntensity;
-
     private float DefaultIntensity;
 
-    private float RandomLight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,31 +25,27 @@ public class LightFlashes : MonoBehaviour
         InvokeRepeating("Lightning", 1, 4);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void Lightning()
     {
-        LightIntensity = Random.Range(FlashMinStrength, FlashMaxStrength);
-        LightComponent.intensity = LightIntensity;  
-        StartCoroutine(FlashTimer());
-        RandomLight = Random.Range(0f, 10f);
-        
-        
+        LightComponent.intensity = DefaultIntensity * FlashStrength;
+        StartCoroutine(FlashTimer());  
     }
 
     IEnumerator FlashTimer()
     {
-        yield return new WaitForSeconds(FlashTime);
+        LightComponent.intensity = DefaultIntensity * FlashStrength;
+
+        yield return new WaitForSeconds(FlashTime*0.75f);
 
         LightComponent.intensity = DefaultIntensity;
 
-        if (RandomLight > 3f)
-        {
-            Lightning();
-        }
+        yield return new WaitForSeconds(0.1f);
+
+        LightComponent.intensity = DefaultIntensity * FlashStrength * 1.7f;
+
+        yield return new WaitForSeconds(FlashTime);
+
+        LightComponent.intensity = DefaultIntensity;
     }
 }
