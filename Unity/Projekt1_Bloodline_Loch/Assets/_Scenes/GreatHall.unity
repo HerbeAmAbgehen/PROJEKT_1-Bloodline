@@ -7836,74 +7836,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2720091509442313720, guid: fd77eeb2ae036aa4b9c835e12d4f9cf6, type: 3}
   m_PrefabInstance: {fileID: 1405999963}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &434229675
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 434229676}
-  - component: {fileID: 434229678}
-  - component: {fileID: 434229677}
-  m_Layer: 0
-  m_Name: SceneChangeTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &434229676
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434229675}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0857048, y: 0.85491943, z: 3.1964645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 985296566}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &434229677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434229675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89eab1e358a13f24ca22dd5c748ab736, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: Church_Plaza
-  InteractionText: {fileID: 305278881}
---- !u!65 &434229678
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434229675}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 7.0509987, y: 2.1706939, z: 2.4889545}
-  m_Center: {x: 0.022035599, y: 0.58534694, z: -0.7444773}
 --- !u!4 &438645792 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2720091509442313720, guid: fd77eeb2ae036aa4b9c835e12d4f9cf6, type: 3}
@@ -17335,7 +17267,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 434229676}
   - {fileID: 1550239740}
   m_Father: {fileID: 2072326547}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27348,7 +27279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89eab1e358a13f24ca22dd5c748ab736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Church_Plaza_Greybox
+  scene: Church_Plaza
   InteractionText: {fileID: 305278881}
 --- !u!4 &1550239740 stripped
 Transform:
