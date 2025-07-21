@@ -71,6 +71,15 @@ public class RayCast : MonoBehaviour
                     TD.OpenDoor();
                 }
             }
+            /*if(hit.collider.tag == "ScareCat")
+            {
+                CatScare CS = hit.collider.gameObject.GetComponent<CatScare>();
+                CatInteraction.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    CS.scare = true;
+                }
+            }*/
         }
         
         else

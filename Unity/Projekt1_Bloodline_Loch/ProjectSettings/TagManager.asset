@@ -9,6 +9,7 @@ TagManager:
   - SceneChange
   - Brick
   - Book
+  - ScareCat
   layers:
   - Default
   - TransparentFX
