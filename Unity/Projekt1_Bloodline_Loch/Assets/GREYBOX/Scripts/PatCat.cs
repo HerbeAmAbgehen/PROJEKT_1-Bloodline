@@ -28,7 +28,6 @@ public class PatCat : MonoBehaviour
     private float CameraRootRotation = 30f;
 
     public bool CanBePatted;
-    public bool IsScratching;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,36 +39,8 @@ public class PatCat : MonoBehaviour
         ArmMesh.enabled = false;
         InvokeRepeating("PlayScratch", 15, 25);
 
-        IsScratching = false;
+        CanBePatted = true;
         PatText.SetActive(false);
-    }
-
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (IsScratching)
-        {
-            CanBePatted = false;
-            PatText.SetActive(false);
-        }
-        else if (!IsScratching)
-        {
-            CanBePatted = true;
-            PatText.SetActive(true);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.E) && !IsScratching) 
-        {
-            MovePlayer();
-            StartCoroutine(CatPat());
-            Debug.Log("Trigger: Pat");           
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        CanBePatted = false;
     }
 
     private void PlayScratch()
@@ -96,12 +67,12 @@ public class PatCat : MonoBehaviour
 
     private IEnumerator CatScratch()
     {
-        IsScratching = true;
+        CanBePatted = false;
         Animator.SetTrigger("Scratch");
         yield return new WaitForSeconds(Scratch.length);
         Animator.SetTrigger("Idle");
         yield return new WaitForSeconds(2);
-        IsScratching = false;
+        CanBePatted = true;
     }
 
     private void MovePlayer()

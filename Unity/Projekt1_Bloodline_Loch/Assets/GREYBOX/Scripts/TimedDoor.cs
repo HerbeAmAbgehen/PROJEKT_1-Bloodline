@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TimedDoor : MonoBehaviour
 {
-    public GameObject InteractionText;
 
     public GameObject Door;
 
@@ -22,37 +21,20 @@ public class TimedDoor : MonoBehaviour
 
     private bool DoorOpen;
 
-    private bool PlayerCollision;
 
     private void Start()
     {
-        InteractionText.SetActive(false);
         DoorCollider = Door.GetComponent<BoxCollider>();
         DoorOpen = false;
-        PlayerCollision = false;
         ClosedXPosition = Door.transform.position.x;
 
         Debug.Log(Door.transform.position.x);
         Debug.Log(DoorCollider.size.z);
     }
 
-    private void OnTriggerEnter(Collider collider)
-    {
-        InteractionText.SetActive(true);
-        PlayerCollision = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        InteractionText.SetActive(false);
-        PlayerCollision = false;
-    }
     private void Update()
     {
-        if (PlayerCollision && Input.GetKeyDown(KeyCode.E))
-        {
-            StartCoroutine(DoorTimer());
-        }
+
 
         if (DoorOpen && Door.transform.position.x > OpenXPosition)
         {
@@ -69,6 +51,11 @@ public class TimedDoor : MonoBehaviour
         DoorOpen = true;
         yield return new WaitForSeconds(DoorOpenTime);
         DoorOpen = false;
+    }
+
+    public void OpenDoor()
+    {
+        StartCoroutine(DoorTimer());
     }
 
 }

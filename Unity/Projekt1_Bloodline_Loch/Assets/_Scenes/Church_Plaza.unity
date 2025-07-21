@@ -20944,9 +20944,9 @@ GameObject:
   - component: {fileID: 726889299}
   - component: {fileID: 726889301}
   - component: {fileID: 726889300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SceneChangeTrigger
-  m_TagString: Untagged
+  m_TagString: SceneChange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20979,7 +20979,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: VoidScene
-  InteractionText: {fileID: 876037303}
   BlackImage: {fileID: 8744296}
 --- !u!65 &726889301
 BoxCollider:
@@ -21000,8 +20999,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.5484085, y: 2.2510278, z: 1.1317749}
-  m_Center: {x: 0.42297077, y: 0.37014592, z: -0.5626849}
+  m_Size: {x: 4.5484085, y: 5.631524, z: 0.40836334}
+  m_Center: {x: 0.42297077, y: 2.0603938, z: -1.2180622}
 --- !u!1001 &727251420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45729,7 +45728,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1447462987}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!4 &1447462984 stripped
 Transform:
@@ -45741,6 +45743,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 1447462983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1447462986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 1447462983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1447462987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447462986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501a56a176ec254da536cf08d96f7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RayLength: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  CatInteraction: {fileID: 876037303}
+  SceneInteraction: {fileID: 876037303}
+  BrickInteraction: {fileID: 876037303}
+  BookInteraction: {fileID: 876037303}
 --- !u!1 &1448089765
 GameObject:
   m_ObjectHideFlags: 0

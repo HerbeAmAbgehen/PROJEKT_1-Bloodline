@@ -8,7 +8,6 @@ public class BrokenWall : MonoBehaviour
 
     public GameObject WallBroken;
 
-    public GameObject InteractionText;
 
     public GameObject BlackImage;
 
@@ -24,6 +23,7 @@ public class BrokenWall : MonoBehaviour
     {
         CG = BlackImage.GetComponent<CanvasGroup>();
         MR = GetComponent<MeshRenderer>();
+        BC = GetComponent<BoxCollider>();
 
         WallWhole.SetActive(true);
         WallBroken.SetActive(false);
@@ -33,22 +33,15 @@ public class BrokenWall : MonoBehaviour
         BC.enabled = true;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if(Input.GetKeyDown(KeyCode.E) && !IsBroken)
-        {
-            StartCoroutine(BreakWall());
-        }
-    }
     private IEnumerator BreakWall()
     {
-        StartCoroutine(FadeIn(1));
-        
+        StartCoroutine(FadeOut(1));
+        yield return new WaitForSeconds(1);
         WallWhole.SetActive(false);
         WallBroken.SetActive(true);
         MR.enabled = false;
         BC.enabled = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         StartCoroutine(FadeIn(1));
         
     }
@@ -86,5 +79,10 @@ public class BrokenWall : MonoBehaviour
         }
 
         CG.alpha = 1f;
+    }
+
+    public void WallBreak()
+    {
+        StartCoroutine(BreakWall());
     }
 }

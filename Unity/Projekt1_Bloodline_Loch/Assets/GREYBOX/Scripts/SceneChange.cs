@@ -8,40 +8,14 @@ public class SceneChange : MonoBehaviour
 {
     public string scene;
 
-    public GameObject InteractionText;
 
     public GameObject BlackImage;
 
     private CanvasGroup CG;
 
-    private bool PlayerCollision;
     private void Start()
     {
-        InteractionText.SetActive(false);
-        PlayerCollision = false;
-
         CG = BlackImage.GetComponent<CanvasGroup>();
-    }
-
-    private void OnTriggerEnter(Collider collider)
-    {
-        InteractionText.SetActive(true);
-        PlayerCollision = true;
-
-    }
-
-    private void OnTriggerExit(Collider collider)
-    {
-        InteractionText.SetActive(false);
-        PlayerCollision = false;
-    }
-
-    private void Update()
-    {
-        if (PlayerCollision && Input.GetKeyDown(KeyCode.E))
-        {
-            StartCoroutine(FadeScene(1));
-        }
     }
 
     private IEnumerator FadeScene(float duration)
@@ -60,5 +34,10 @@ public class SceneChange : MonoBehaviour
 
         CG.alpha = 1f;
         SceneManager.LoadScene(scene);
+    }
+
+    public void ChangeScene()
+    {
+        StartCoroutine(FadeScene(1));
     }
 }

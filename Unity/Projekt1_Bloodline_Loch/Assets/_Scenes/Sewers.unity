@@ -7835,6 +7835,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 5abb3d18170c7cc4b8ce3577ef8b5ed8, type: 2}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: Gravity
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: JumpHeight
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: FallTimeout
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 1
       objectReference: {fileID: 0}
@@ -7848,7 +7860,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Radius
-      value: 0
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_RootOrder
@@ -7900,8 +7920,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1843022479}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1275159677}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+--- !u!1 &964458755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 964458754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &970324204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9339,6 +9367,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 964458754}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1275159677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964458755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501a56a176ec254da536cf08d96f7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RayLength: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  CatInteraction: {fileID: 1804117781}
+  SceneInteraction: {fileID: 1804117781}
+  BrickInteraction: {fileID: 0}
+  BookInteraction: {fileID: 0}
 --- !u!1001 &1291876943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10274,7 +10322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Lower_City
-  InteractionText: {fileID: 1804117781}
   BlackImage: {fileID: 362537513}
 --- !u!65 &1460112671
 BoxCollider:
@@ -10295,8 +10342,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1722507, y: 2.1706939, z: 3.4142818}
-  m_Center: {x: -0.10208464, y: 0.58534694, z: -0.28181362}
+  m_Size: {x: 2.1722507, y: 2.1706939, z: 1.6808186}
+  m_Center: {x: -0.10208464, y: 0.58534694, z: -1.1485453}
 --- !u!4 &1460112672
 Transform:
   m_ObjectHideFlags: 0
@@ -11253,9 +11300,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1720669408}
   - component: {fileID: 1720669409}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spawn Collider
-  m_TagString: Untagged
+  m_TagString: SceneChange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

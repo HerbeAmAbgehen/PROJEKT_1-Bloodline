@@ -152620,7 +152620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 882412649474394552, guid: 882c9667b63e5654e960b5d1e9037674, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.135254
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 882412649474394552, guid: 882c9667b63e5654e960b5d1e9037674, type: 3}
       propertyPath: m_LocalPosition.y
@@ -152628,7 +152628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 882412649474394552, guid: 882c9667b63e5654e960b5d1e9037674, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.7544708
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 882412649474394552, guid: 882c9667b63e5654e960b5d1e9037674, type: 3}
       propertyPath: m_LocalRotation.w
@@ -205140,7 +205140,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1447462987}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!4 &1447462984 stripped
 Transform:
@@ -205152,6 +205155,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4135013735270702856, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
   m_PrefabInstance: {fileID: 1447462983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1447462986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 1447462983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1447462987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447462986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501a56a176ec254da536cf08d96f7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RayLength: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  CatInteraction: {fileID: 1790573410}
+  SceneInteraction: {fileID: 1790573410}
 --- !u!1 &1447903657
 GameObject:
   m_ObjectHideFlags: 0
@@ -219842,9 +219868,9 @@ GameObject:
   - component: {fileID: 1541403517}
   - component: {fileID: 1541403516}
   - component: {fileID: 1541403515}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SceneChangeTrigger
-  m_TagString: Untagged
+  m_TagString: SceneChange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -219862,7 +219888,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Barracks_Dungeons
-  InteractionText: {fileID: 1790573410}
   BlackImage: {fileID: 1383153742}
 --- !u!65 &1541403516
 BoxCollider:
@@ -219883,8 +219908,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3374333, y: 2.1706939, z: 2.0376587}
-  m_Center: {x: -0.019493341, y: 0.58534694, z: -0.053955078}
+  m_Size: {x: 1.0743947, y: 2.1706939, z: 2.0376587}
+  m_Center: {x: -0.65101266, y: 0.58534694, z: -0.053955067}
 --- !u!4 &1541403517
 Transform:
   m_ObjectHideFlags: 0
@@ -247943,7 +247968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Barracks_Dungeon_Greybox
-  InteractionText: {fileID: 1790573410}
   BlackImage: {fileID: 0}
 --- !u!1 &1716402332
 GameObject:

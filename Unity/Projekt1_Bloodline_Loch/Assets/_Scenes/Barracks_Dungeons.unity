@@ -64935,36 +64935,15 @@ GameObject:
   - component: {fileID: 1145270522}
   - component: {fileID: 1145270521}
   - component: {fileID: 1145270520}
-  - component: {fileID: 1145270519}
   - component: {fileID: 1145270523}
-  m_Layer: 0
+  - component: {fileID: 1145270524}
+  m_Layer: 6
   m_Name: InteractionBrick
-  m_TagString: Untagged
+  m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1145270519
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145270518}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.4144337, y: 13.885749, z: 3.4254959}
-  m_Center: {x: 0.07019613, y: -3.6765902, z: 2.649133}
 --- !u!23 &1145270520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64985,7 +64964,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 04e25d491d2f49e47a4134a686f8dcb4, type: 2}
+  - {fileID: 2100000, guid: 4023c901f302f1a488a88f1f2d06a3f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65044,8 +65023,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WallWhole: {fileID: 851506370}
   WallBroken: {fileID: 635825103}
-  InteractionText: {fileID: 595943930}
   BlackImage: {fileID: 1024767194}
+--- !u!65 &1145270524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145270518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.99999994, z: 0.99999994}
+  m_Center: {x: 0, y: -0.00001335144, z: 0}
 --- !u!1 &1148375971
 GameObject:
   m_ObjectHideFlags: 0
@@ -99152,9 +99151,9 @@ GameObject:
   - component: {fileID: 1689298450}
   - component: {fileID: 1689298449}
   - component: {fileID: 1689298448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SceneChangeTrigger
-  m_TagString: Untagged
+  m_TagString: SceneChange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99172,7 +99171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Old_Library
-  InteractionText: {fileID: 595943930}
   BlackImage: {fileID: 1024767194}
 --- !u!65 &1689298449
 BoxCollider:
@@ -99193,8 +99191,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3374333, y: 2.1706939, z: 2.0376587}
-  m_Center: {x: -0.019493341, y: 0.58534694, z: -0.053955078}
+  m_Size: {x: 1.0105684, y: 2.3158455, z: 1.2649345}
+  m_Center: {x: -0.6829258, y: 0.2799561, z: 0.068416595}
 --- !u!4 &1689298450
 Transform:
   m_ObjectHideFlags: 0
@@ -128442,12 +128440,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5393215578589016640, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Radius
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5393215578589016655, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5abb3d18170c7cc4b8ce3577ef8b5ed8, type: 2}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: Gravity
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: JumpHeight
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: FallTimeout
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: GroundLayers.m_Bits
       value: 1
@@ -128462,7 +128472,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Radius
-      value: 0.27
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228382, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_RootOrder
@@ -128514,8 +128532,36 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       insertIndex: 0
       addedObject: {fileID: 360302493}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2028251475}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+--- !u!1 &2028251474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 2028251473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2028251475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028251474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1501a56a176ec254da536cf08d96f7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RayLength: 1.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  CatInteraction: {fileID: 595943930}
+  SceneInteraction: {fileID: 595943930}
+  BrickInteraction: {fileID: 595943930}
+  BookInteraction: {fileID: 0}
 --- !u!1001 &2029572776
 PrefabInstance:
   m_ObjectHideFlags: 0
