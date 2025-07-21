@@ -27,8 +27,8 @@ public class PatCat : MonoBehaviour
     private float PlayerRotation = 268.5f;
     private float CameraRootRotation = 30f;
 
-    private bool CanBePatted;
-    private bool IsScratching;
+    public bool CanBePatted;
+    public bool IsScratching;
     // Start is called before the first frame update
     void Start()
     {
@@ -111,5 +111,11 @@ public class PatCat : MonoBehaviour
         Player.transform.localEulerAngles = new Vector3(0, PlayerRotation, 0);
         PlayerCameraRoot.transform.localEulerAngles = new Vector3 (CameraRootRotation,0,0);
         Debug.Log("MovedPlayer");
+    }
+
+    public void PlayPat()
+    {
+        MovePlayer();
+        StartCoroutine(CatPat());
     }
 }
