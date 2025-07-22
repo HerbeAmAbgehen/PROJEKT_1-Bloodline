@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class PatCat : MonoBehaviour
 {
     public GameObject Arm;
-    public GameObject PatText;
 
     public GameObject Player;
     public GameObject PlayerCameraRoot;
@@ -40,7 +39,6 @@ public class PatCat : MonoBehaviour
         InvokeRepeating("PlayScratch", 15, 25);
 
         CanBePatted = true;
-        PatText.SetActive(false);
     }
 
     private void PlayScratch()

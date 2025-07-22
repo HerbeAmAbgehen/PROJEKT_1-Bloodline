@@ -6,10 +6,9 @@ public class RayCast : MonoBehaviour
 {
     public float RayLength;
     public LayerMask layerMask;
-    public GameObject CatInteraction;
-    public GameObject SceneInteraction;
-    public GameObject BrickInteraction;
-    public GameObject BookInteraction;
+    public GameObject HandIcon;
+    public GameObject SceneIcon;
+    public GameObject EyeIcon;
 
     private Camera MainCamera;
 
@@ -17,7 +16,7 @@ public class RayCast : MonoBehaviour
     void Start()
     {
         MainCamera = Camera.main;
-        CatInteraction.SetActive(false);
+        HandIcon.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,39 +35,60 @@ public class RayCast : MonoBehaviour
 
             if (hit.collider.tag == "Cat")
             {
-                CatInteraction.SetActive(true);
+                HandIcon.SetActive(true);
                 PatCat CP = hit.collider.gameObject.GetComponent<PatCat>();
 
                 if(CP.CanBePatted && Input.GetKeyDown(KeyCode.E))
                 {
                     CP.PlayPat();
+                    HandIcon.SetActive(false);
                 }
             }
             if (hit.collider.tag == "SceneChange")
             {
                 SceneChange SC = hit.collider.gameObject.GetComponent<SceneChange>();
-                SceneInteraction.SetActive(true);
+                SceneIcon.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     SC.ChangeScene();
+                    SceneIcon.SetActive(false);
                 }
             }
             if(hit.collider.tag == "Brick")
             {
                 BrokenWall BW = hit.collider.gameObject.GetComponent<BrokenWall>();
-                BrickInteraction.SetActive(true);
+                HandIcon.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     BW.WallBreak();
+                    HandIcon.SetActive(false);
                 }
             }
             if(hit.collider.tag == "Book")
             {
                 TimedDoor TD = hit.collider.gameObject.GetComponent<TimedDoor>();
-                BookInteraction.SetActive(true);
+                HandIcon.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     TD.OpenDoor();
+                    HandIcon.SetActive(false);
+                }
+            }
+            if(hit.collider.tag == "Secret")
+            {
+                SecretItem SI = hit.collider.gameObject.GetComponent<SecretItem>();
+                CharacterController PC = GetComponent<CharacterController>();
+                EyeIcon.SetActive(true);
+                if(Input.GetKeyDown(KeyCode.E) && !SI.TextActive)
+                {
+                    SI.ShowText();
+                    EyeIcon.SetActive(false);
+                    PC.enabled = false;
+                }
+                else if(Input.GetKeyDown(KeyCode.E) && SI.TextActive)
+                {
+                    SI.HideText();
+                    PC.enabled = true;
                 }
             }
             /*if(hit.collider.tag == "ScareCat")
@@ -84,10 +104,9 @@ public class RayCast : MonoBehaviour
         
         else
         {
-            CatInteraction.SetActive(false);
-            SceneInteraction.SetActive(false);
-            BrickInteraction.SetActive(false);
-            BookInteraction.SetActive(false);
+            HandIcon.SetActive(false);
+            SceneIcon.SetActive(false);
+            EyeIcon.SetActive(false);
         }
 
             Debug.DrawRay(transform.position, Vector3.forward);

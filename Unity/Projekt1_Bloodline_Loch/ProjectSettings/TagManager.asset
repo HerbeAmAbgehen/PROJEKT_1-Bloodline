@@ -10,6 +10,7 @@ TagManager:
   - Brick
   - Book
   - ScareCat
+  - Secret
   layers:
   - Default
   - TransparentFX
