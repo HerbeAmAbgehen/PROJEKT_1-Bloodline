@@ -6,6 +6,7 @@ public class SecretItem : MonoBehaviour
 {
     public GameObject Text;
     public bool TextActive = false;
+    public float TextActiveTime;
 
     private bool KnowsSecret;
     private SecretCounter SecretCounter;
@@ -18,19 +19,14 @@ public class SecretItem : MonoBehaviour
 
     public void ShowText()
     {
-        Text.SetActive(true);
-        TextActive = true;
-        if (!KnowsSecret)
-        {
-            SecretCounter.FoundSecret();
-            KnowsSecret = false;
-        }
+        StartCoroutine(TextTimer());
     }
 
-    public void HideText()
+
+    private IEnumerator TextTimer()
     {
+        Text.SetActive(true);
+        yield return new WaitForSeconds(TextActiveTime);
         Text.SetActive(false);
-        TextActive = false;
     }
-
 }

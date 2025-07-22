@@ -10,11 +10,14 @@ public class PatCat : MonoBehaviour
     public GameObject Player;
     public GameObject PlayerCameraRoot;
     public GameObject PlayerPositionTarget;
+    public GameObject Text;
 
     public AnimationClip Pat;
     public AnimationClip Scratch;
     public AnimationClip Look;
     public AnimationClip ArmPat;
+
+    public float TextActiveTime;
     
     private Animator Animator;
     private Animator ArmAnimator;
@@ -36,6 +39,7 @@ public class PatCat : MonoBehaviour
         ArmMesh = Arm.GetComponent<MeshRenderer>();
 
         ArmMesh.enabled = false;
+        Text.SetActive(false);
         InvokeRepeating("PlayScratch", 15, 25);
 
         CanBePatted = true;
@@ -59,8 +63,12 @@ public class PatCat : MonoBehaviour
         ArmMesh.enabled=false;
         yield return new WaitForSeconds(Pat.length - ArmPat.length);
         Animator.SetTrigger("Idle");
+        Text.SetActive(true);
+        yield return new WaitForSeconds(TextActiveTime);
+        Text.SetActive(false);
         PC.gameObject.SetActive(true);
         CanBePatted = true;
+        
     }
 
     private IEnumerator CatScratch()
@@ -87,4 +95,5 @@ public class PatCat : MonoBehaviour
         MovePlayer();
         StartCoroutine(CatPat());
     }
+
 }

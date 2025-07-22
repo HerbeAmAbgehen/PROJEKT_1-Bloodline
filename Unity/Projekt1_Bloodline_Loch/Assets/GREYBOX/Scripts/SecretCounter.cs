@@ -9,5 +9,6 @@ public class SecretCounter : MonoBehaviour
     public void FoundSecret()
     {
         SecretsFound++;
+        Debug.Log("Found a secret. Secrets found: " + SecretsFound);
     }
 }

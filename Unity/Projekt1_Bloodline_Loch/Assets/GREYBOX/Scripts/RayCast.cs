@@ -35,14 +35,19 @@ public class RayCast : MonoBehaviour
 
             if (hit.collider.tag == "Cat")
             {
-                HandIcon.SetActive(true);
+                
                 PatCat CP = hit.collider.gameObject.GetComponent<PatCat>();
 
-                if(CP.CanBePatted && Input.GetKeyDown(KeyCode.E))
+                if (CP.CanBePatted)
                 {
-                    CP.PlayPat();
-                    HandIcon.SetActive(false);
+                    HandIcon.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        CP.PlayPat();
+                        HandIcon.SetActive(false);
+                    }
                 }
+
             }
             if (hit.collider.tag == "SceneChange")
             {
@@ -79,16 +84,10 @@ public class RayCast : MonoBehaviour
                 SecretItem SI = hit.collider.gameObject.GetComponent<SecretItem>();
                 CharacterController PC = GetComponent<CharacterController>();
                 EyeIcon.SetActive(true);
-                if(Input.GetKeyDown(KeyCode.E) && !SI.TextActive)
+                if(Input.GetKeyDown(KeyCode.E))
                 {
                     SI.ShowText();
                     EyeIcon.SetActive(false);
-                    PC.enabled = false;
-                }
-                else if(Input.GetKeyDown(KeyCode.E) && SI.TextActive)
-                {
-                    SI.HideText();
-                    PC.enabled = true;
                 }
             }
             /*if(hit.collider.tag == "ScareCat")
