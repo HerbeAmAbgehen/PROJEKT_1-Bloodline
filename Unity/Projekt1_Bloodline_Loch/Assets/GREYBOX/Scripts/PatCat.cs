@@ -96,4 +96,9 @@ public class PatCat : MonoBehaviour
         StartCoroutine(CatPat());
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Animator.SetTrigger("Jump");
+    }
+
 }

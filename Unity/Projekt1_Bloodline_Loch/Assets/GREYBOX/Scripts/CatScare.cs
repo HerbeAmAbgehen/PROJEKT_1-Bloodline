@@ -3,68 +3,61 @@ using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CatScare : MonoBehaviour
 {
     public GameObject Player;
 
-    public GameObject Throne;
-
     public GameObject BlackImage;
 
-    public float speed;
+    public GameObject RedImage;
 
     public float FadeDuration;
 
     public string TargetScene;
 
-    public bool scare;
+    public AnimationClip Cat_Jump;
 
 
-    private CanvasGroup CG;
+    private CanvasGroup CGblack;
+
+    private CanvasGroup CGred;
+
+    private Image redImage;
+
+    private Image blackImage;
 
     private CharacterController PC;
 
-    private Vector3 PlayerStartPosition;
+    private Animator Animator;
 
-    
 
-    private Collider CatCollider;
-
-    private Vector3 PlayerCatDistance;
     // Start is called before the first frame update
     void Start()
     {
-        CG = BlackImage.GetComponent<CanvasGroup>();
+        CGblack = BlackImage.GetComponent<CanvasGroup>();
+
+        CGred = RedImage.GetComponent<CanvasGroup>();
 
         PC = Player.GetComponent<CharacterController>();
 
-        PlayerStartPosition = Player.transform.position;
+        Animator = GetComponent<Animator>();
 
-        scare = false;
+        blackImage = BlackImage.GetComponent<Image>();
 
-        CatCollider = GetComponent<Collider>();
+        redImage = RedImage.GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
 
-        if (scare)
-        {
-            PlayerCatDistance = Player.transform.position - transform.position;
-            transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World);
-            if (PlayerCatDistance.magnitude < 3f)
-            {
-                StartCoroutine(FadeScene(FadeDuration));
-            }
-
-        }
     }
 
     private IEnumerator FadeScene(float duration)
     {
+        yield return new WaitForSeconds(Cat_Jump.length / 4);
 
         float t = 0f;
         while (t < duration)
@@ -72,18 +65,26 @@ public class CatScare : MonoBehaviour
         {
 
             t += Time.deltaTime;
-            CG.alpha = Mathf.Clamp01(t / duration);
+            CGred.alpha = Mathf.Clamp01(t / duration);
+            CGblack.alpha = Mathf.Clamp01(t / duration);
+            redImage.color *= 0.995f;
             yield return null;
 
         }
 
-        CG.alpha = 1f;
+        redImage.color = Color.black;
+        CGred.alpha = 0f;
+        CGblack.alpha = 1f;
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(TargetScene);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        scare = true;
+        StartCoroutine(FadeScene(FadeDuration));
+        PC.enabled = false;
+        Animator.SetTrigger("Jump");
+        
     }
 
     /*private IEnumerator FadeOut(float duration)
@@ -120,23 +121,6 @@ public class CatScare : MonoBehaviour
 
         CG.alpha = 0f;
 
-    }
-
-    private IEnumerator Scare()
-    {
-        StartCoroutine(FadeOut(1f));
-        yield return new WaitForSeconds(1);
-        PC.enabled = false;
-        Player.transform.position = PlayerStartPosition;
-        Throne.SetActive(false);
-        CatCollider.enabled = false;
-        StartCoroutine(FadeIn(1f));
-        scare = true;
-
-    }
-    public void TriggerScare()
-    {
-        StartCoroutine(Scare());
     }
     */
 }
