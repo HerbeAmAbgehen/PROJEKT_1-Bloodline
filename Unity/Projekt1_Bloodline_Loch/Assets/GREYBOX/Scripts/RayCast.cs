@@ -90,15 +90,15 @@ public class RayCast : MonoBehaviour
                     EyeIcon.SetActive(false);
                 }
             }
-            /*if(hit.collider.tag == "ScareCat")
+            if(hit.collider.tag == "ScareCat")
             {
                 CatScare CS = hit.collider.gameObject.GetComponent<CatScare>();
-                CatInteraction.SetActive(true);
+                HandIcon.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    CS.scare = true;
+                    CS.TriggerScare();
                 }
-            }*/
+            }
         }
         
         else

@@ -19,6 +19,7 @@ public class CatScare : MonoBehaviour
 
     public AnimationClip Cat_Jump;
 
+    public GameObject BloodParticles;
 
     private CanvasGroup CGblack;
 
@@ -32,10 +33,13 @@ public class CatScare : MonoBehaviour
 
     private Animator Animator;
 
+    private bool killPlayer = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
+
         CGblack = BlackImage.GetComponent<CanvasGroup>();
 
         CGred = RedImage.GetComponent<CanvasGroup>();
@@ -52,12 +56,18 @@ public class CatScare : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (killPlayer && Player.transform.localRotation.x > -80)
+        {
+            Player.transform.Rotate(Vector3.left * 120 * Time.deltaTime);
+        }
+                                            
     }
 
     private IEnumerator FadeScene(float duration)
     {
         yield return new WaitForSeconds(Cat_Jump.length / 4);
+        killPlayer = true;
+        BloodParticles.SetActive(true);
 
         float t = 0f;
         while (t < duration)
@@ -68,6 +78,7 @@ public class CatScare : MonoBehaviour
             CGred.alpha = Mathf.Clamp01(t / duration);
             CGblack.alpha = Mathf.Clamp01(t / duration);
             redImage.color *= 0.995f;
+
             yield return null;
 
         }
@@ -79,7 +90,7 @@ public class CatScare : MonoBehaviour
         SceneManager.LoadScene(TargetScene);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void TriggerScare()
     {
         StartCoroutine(FadeScene(FadeDuration));
         PC.enabled = false;
