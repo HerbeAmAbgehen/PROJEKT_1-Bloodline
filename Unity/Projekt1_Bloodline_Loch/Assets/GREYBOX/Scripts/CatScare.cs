@@ -93,6 +93,7 @@ public class CatScare : MonoBehaviour
     public void TriggerScare()
     {
         StartCoroutine(FadeScene(FadeDuration));
+        GameObject.Find("heartbeat").GetComponent<AudioSource>().Stop();
         PC.enabled = false;
         Animator.SetTrigger("Jump");
         

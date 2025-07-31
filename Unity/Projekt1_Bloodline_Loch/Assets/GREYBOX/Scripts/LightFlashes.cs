@@ -9,6 +9,12 @@ public class LightFlashes : MonoBehaviour
 
     public float FlashMinStrength, FlashMaxStrength;
 
+    public AudioClip Thunder_1;
+
+    public AudioClip Thunder_2;
+
+    public AudioClip Thunder_3;
+
     private Light LightComponent;
 
     private float LightIntensity;
@@ -17,10 +23,14 @@ public class LightFlashes : MonoBehaviour
 
     private float RandomLight;
 
+    private AudioSource Audio;
+
     // Start is called before the first frame update
     void Start()
     {
         LightComponent = GetComponent<Light>();
+
+        Audio = GetComponent<AudioSource>();
 
         DefaultIntensity = LightComponent.intensity;
 
@@ -35,6 +45,23 @@ public class LightFlashes : MonoBehaviour
 
     private void Lightning()
     {
+        int flashVariant = Random.Range(1, 4);
+
+        if (flashVariant == 1)
+        {
+            Audio.clip = Thunder_1;
+        }
+        else if (flashVariant == 2)
+        {
+            Audio.clip = Thunder_2;
+        }
+        else
+        {
+            Audio.clip = Thunder_3;
+        }
+
+        Audio.Play();
+
         LightIntensity = Random.Range(FlashMinStrength, FlashMaxStrength);
         LightComponent.intensity = LightIntensity;  
         StartCoroutine(FlashTimer());

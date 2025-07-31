@@ -28,20 +28,28 @@ public class SlowTrap : MonoBehaviour
 
     private bool ArmsWait = false;
 
+    private float defaultArmsSpeed;
+
     private float ArmsRestPositionX;
+
+    private AudioSource Audio;
   
     // Start is called before the first frame update
     void Start()
     {
-        playerGO = GameObject.Find("Player");
+        playerGO = GameObject.Find("PlayerCapsule");
 
         playerFPC = playerGO.GetComponent<FirstPersonController>();
 
         ArmsCollider = TrapArms.GetComponent<BoxCollider>();
 
+        Audio = GetComponent<AudioSource>();
+
         defaultMoveSpeed = playerFPC.MoveSpeed;
 
         defaultSprintSpeed = playerFPC.SprintSpeed;
+
+        defaultArmsSpeed = ArmsSpeed;
 
         ArmsRestPositionX = TrapArms.transform.position.x;
 
@@ -53,6 +61,7 @@ public class SlowTrap : MonoBehaviour
     {
 
         StartCoroutine(StunTimer());
+        Audio.Play();
         PlayerCollision = true;
         ArmsWait = true;
     }
@@ -65,23 +74,25 @@ public class SlowTrap : MonoBehaviour
 
         PlayerCollision = false;
 
-        TrapArms.SetActive(false);
+        ArmsSpeed *= 5f;
+        
     }
 
     private void Update()
     {
         if (ArmsWait && (TrapArms.transform.position.x < ArmsRestPositionX + ArmsCollider.size.y))
         {
-            
             TrapArms.transform.Translate(Vector3.down * Time.deltaTime * ArmsSpeed);
         }
         else if (!ArmsWait && TrapArms.transform.position.x > ArmsRestPositionX)
         {
-            TrapArms.transform.Translate(Vector3.down * Time.deltaTime * -0.01f* ArmsSpeed);
+            TrapArms.transform.Translate(Vector3.down * Time.deltaTime * -0.025f* ArmsSpeed);
         }
-        else if (TrapArms.transform.position.x == ArmsRestPositionX-0.1f)
+        else if (TrapArms.transform.position.x <= ArmsRestPositionX)
         {
             TrapArms.SetActive(false);
+            ArmsSpeed = defaultArmsSpeed;
+            Audio.Stop();
         }
         
 

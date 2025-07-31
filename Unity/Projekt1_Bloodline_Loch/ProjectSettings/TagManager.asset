@@ -11,6 +11,11 @@ TagManager:
   - Book
   - ScareCat
   - Secret
+  - GroundWet
+  - GroundWater
+  - GroundRock
+  - GroundWood
+  - GroundDirt
   layers:
   - Default
   - TransparentFX

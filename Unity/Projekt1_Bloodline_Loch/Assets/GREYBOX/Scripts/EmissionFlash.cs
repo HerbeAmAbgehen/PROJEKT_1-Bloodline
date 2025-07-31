@@ -9,17 +9,27 @@ public class EmissionFlash : MonoBehaviour
 
     public float FlashStrength;
 
+    public AudioClip Thunder_1;
+
+    public AudioClip Thunder_2;
+
+    public AudioClip Thunder_3;
+
     private Renderer Renderer;
 
     private Vector4 DefaultColor;
 
     private Vector4 FlashIntensity;
 
+    private AudioSource Audio;
+
 
     // Start is called before the first frame update
     void Start()
     {
         Renderer = GetComponent<Renderer>();
+
+        Audio = GetComponent<AudioSource>();
 
         DefaultColor = Renderer.material.GetColor("_EmissionColor");
 
@@ -38,6 +48,23 @@ public class EmissionFlash : MonoBehaviour
     IEnumerator FlashTimer()
     {
         Renderer.material.SetColor("_EmissionColor", FlashIntensity);
+
+        int flashVariant = Random.Range(1, 4);
+
+        if(flashVariant == 1)
+        {
+            Audio.clip = Thunder_1;
+        }
+        else if(flashVariant == 2)
+        {
+            Audio.clip = Thunder_2;
+        }
+        else
+        {
+            Audio.clip = Thunder_3;
+        }
+
+        Audio.Play();
 
         yield return new WaitForSeconds(FlashTime*0.75f);
 

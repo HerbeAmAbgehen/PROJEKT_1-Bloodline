@@ -40,10 +40,19 @@ public class TimedDoor : MonoBehaviour
         {
             Door.transform.Translate(Vector3.forward * Time.deltaTime * slideSpeed);
         }
+        else if (DoorOpen && Door.transform.position.x < ClosedXPosition)
+        {
+            Door.GetComponent<AudioSource>().Stop();
+        }
         else if (!DoorOpen && Door.transform.position.x < ClosedXPosition)
         {
             Door.transform.Translate(Vector3.forward * Time.deltaTime * -slideSpeed);
         }
+        else
+        {
+            Door.GetComponent<AudioSource>().Stop();
+        }
+
     }
 
     IEnumerator DoorTimer()
@@ -51,11 +60,13 @@ public class TimedDoor : MonoBehaviour
         DoorOpen = true;
         yield return new WaitForSeconds(DoorOpenTime);
         DoorOpen = false;
+        Door.GetComponent<AudioSource>().Play();
     }
 
     public void OpenDoor()
     {
         StartCoroutine(DoorTimer());
+        GetComponent<AudioSource>().Play();
     }
 
 }

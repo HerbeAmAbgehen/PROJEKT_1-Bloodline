@@ -431,7 +431,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8744296}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -1050,6 +1050,10 @@ PrefabInstance:
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_Name
       value: Blood_2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2329,6 +2333,10 @@ PrefabInstance:
       value: Blood_2 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3136,6 +3144,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3985,6 +3997,10 @@ PrefabInstance:
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_Name
       value: Blood_2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4909,6 +4925,7 @@ GameObject:
   - component: {fileID: 149252822}
   - component: {fileID: 149252824}
   - component: {fileID: 149252825}
+  - component: {fileID: 149252826}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -5031,6 +5048,105 @@ MonoBehaviour:
   FlashTime: 0.05
   FlashMinStrength: 0.3
   FlashMaxStrength: 0.7
+  Thunder_1: {fileID: 8300000, guid: 9264e792261f5b145bd87220f47e9c81, type: 3}
+  Thunder_2: {fileID: 8300000, guid: 9a5c1e0976d46784c84f2910630a9ec2, type: 3}
+  Thunder_3: {fileID: 8300000, guid: 950d91dd461eed042aa7c5f7aba74710, type: 3}
+--- !u!82 &149252826
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149252821}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &154273776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6075,6 +6191,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7528,6 +7648,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9980,6 +10104,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310556627}
   m_Mesh: {fileID: -4472017540321508978, guid: 2d72974df834482458edcc2929abc09a, type: 3}
+--- !u!1 &310741004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310741005}
+  m_Layer: 0
+  m_Name: ---SOUND---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &310741005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310741004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.67781, y: -7.7700734, z: -0.6907593}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 978719996}
+  - {fileID: 1565704027}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &311771340
 GameObject:
   m_ObjectHideFlags: 0
@@ -12289,6 +12446,10 @@ PrefabInstance:
       value: Blood_5 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12601,6 +12762,10 @@ PrefabInstance:
       value: Blood_5 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12820,6 +12985,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13442,6 +13611,10 @@ PrefabInstance:
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_Name
       value: Blood_1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15924,6 +16097,10 @@ PrefabInstance:
       value: Blood_3 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -16142,6 +16319,10 @@ PrefabInstance:
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_Name
       value: Blood_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17652,6 +17833,10 @@ PrefabInstance:
       value: Blood_2 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18679,6 +18864,10 @@ PrefabInstance:
       value: Blood_3 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18998,6 +19187,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19653,6 +19846,10 @@ PrefabInstance:
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_Name
       value: Blood_1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20793,6 +20990,10 @@ PrefabInstance:
       value: Blood_5 (14)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -20943,6 +21144,7 @@ GameObject:
   - component: {fileID: 726889299}
   - component: {fileID: 726889301}
   - component: {fileID: 726889300}
+  - component: {fileID: 726889302}
   m_Layer: 6
   m_Name: SceneChangeTrigger
   m_TagString: SceneChange
@@ -20978,6 +21180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: VoidScene
+  playsAudio: 1
   BlackImage: {fileID: 8744296}
 --- !u!65 &726889301
 BoxCollider:
@@ -21000,6 +21203,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.5484085, y: 5.631524, z: 0.40836334}
   m_Center: {x: 0.42297077, y: 2.0603938, z: -1.2180622}
+--- !u!82 &726889302
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726889298}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2834fd37866ae8a4585a877bfcac9ab7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &727251420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21011,6 +21310,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22985,6 +23288,10 @@ PrefabInstance:
       value: Blood_5 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -23636,6 +23943,10 @@ PrefabInstance:
       value: Blood_5 (16)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -23861,6 +24172,10 @@ PrefabInstance:
       value: Blood_3 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -24009,6 +24324,10 @@ PrefabInstance:
       value: Blood_3 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -24147,6 +24466,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73feb771e7da04b48bf707cccc8e984c, type: 3}
+--- !u!114 &822836355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 1447462983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447462986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &824004045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24158,6 +24488,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -26570,6 +26904,10 @@ PrefabInstance:
       value: Blood_3 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -28438,7 +28776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7e9f9c224174b4cadd0457b19150b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 1426291334}
+  Text: {fileID: 984053958}
   TextActive: 0
   TextActiveTime: 3
 --- !u!65 &966117736
@@ -28579,6 +28917,10 @@ PrefabInstance:
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_Name
       value: Blood_1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -28723,6 +29065,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -28873,6 +29219,10 @@ PrefabInstance:
       value: Blood_3 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -28943,6 +29293,328 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3218822380856945738, guid: 2a80e653ba92e624dbd2ade94d4ae4c8, type: 3}
   m_PrefabInstance: {fileID: 29406912}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &978719995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 978719996}
+  - component: {fileID: 978719999}
+  - component: {fileID: 978719998}
+  - component: {fileID: 978719997}
+  m_Layer: 0
+  m_Name: Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &978719996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978719995}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 310741005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &978719997
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978719995}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f4f503bacbc6df749a8b80e13f41a14c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &978719998
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978719995}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 04b1d5be7894794458cc1c0d9738157c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &978719999
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978719995}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7a12a76ad4847624eb1443a02b7465bb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &983014426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29021,6 +29693,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1696575797258677748, guid: 12b1c5bfb68d3e8418967e2403b097d1, type: 3}
   m_PrefabInstance: {fileID: 983014426}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984053958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984053959}
+  - component: {fileID: 984053961}
+  - component: {fileID: 984053960}
+  m_Layer: 5
+  m_Name: Secret_Textbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &984053959
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984053958}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 0}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1426291335}
+  m_Father: {fileID: 1498930619}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 115.000015}
+  m_SizeDelta: {x: 1348, y: 758}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &984053960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984053958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 597971e44c8c8d34d97ef1ed9ae3ce93, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &984053961
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984053958}
+  m_CullTransparentMesh: 1
 --- !u!1001 &986157984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29174,6 +29922,10 @@ PrefabInstance:
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_Name
       value: Blood_2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30021,6 +30773,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30903,6 +31659,10 @@ PrefabInstance:
       value: Blood_1 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -31740,6 +32500,10 @@ PrefabInstance:
       value: Blood_3
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -32326,6 +33090,10 @@ PrefabInstance:
       value: Blood_5 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -32495,6 +33263,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33364,6 +34136,10 @@ PrefabInstance:
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_Name
       value: Blood_2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -34367,6 +35143,10 @@ PrefabInstance:
       value: Blood_2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -34680,6 +35460,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -41148,6 +41932,10 @@ PrefabInstance:
       value: Blood_1 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -42513,6 +43301,10 @@ PrefabInstance:
       value: Blood_3 (16)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -42765,6 +43557,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43427,6 +44223,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -45239,6 +46039,10 @@ PrefabInstance:
       value: Blood_1 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -45502,14 +46306,14 @@ RectTransform:
   m_GameObject: {fileID: 1426291334}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2500001, y: 1.2500001, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1498930619}
+  m_Father: {fileID: 984053959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 25.000013}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -11}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426291336
@@ -45534,8 +46338,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: These people suffered horribly before they died!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f535ab3663c053e48925a08eb0947740, type: 2}
+  m_sharedMaterial: {fileID: 7179662544608774019, guid: f535ab3663c053e48925a08eb0947740, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -45863,12 +46667,20 @@ PrefabInstance:
       value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: MoveSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: JumpHeight
       value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: FallTimeout
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: SprintSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: GroundLayers.m_Bits
@@ -45940,6 +46752,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1447462988}
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1447462990}
+    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1447462989}
   m_SourcePrefab: {fileID: 100100000, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
 --- !u!4 &1447462984 stripped
 Transform:
@@ -45987,6 +46805,122 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430ee3fe2c382f4459bcd69536b98270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1447462989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447462986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057385e4c44adc548ab950f58e16e9ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerAudio: {fileID: 1447462990}
+  PlayerFPS: {fileID: 822836355}
+  DefaultSteps: {fileID: 8300000, guid: 5964624e834626f4ca666ec2f55a2fd0, type: 3}
+  WetSteps: {fileID: 8300000, guid: 5964624e834626f4ca666ec2f55a2fd0, type: 3}
+  WaterSteps: {fileID: 8300000, guid: ddd8601111c87704fa69584fd5c02619, type: 3}
+  RockSteps: {fileID: 8300000, guid: 3ee4faa464a557f409d11e583d545573, type: 3}
+  WoodSteps: {fileID: 8300000, guid: 3ee4faa464a557f409d11e583d545573, type: 3}
+  DirtSteps: {fileID: 8300000, guid: 5ba4f7e6c26131a4ca4c6d8bd31df26e, type: 3}
+--- !u!82 &1447462990
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447462986}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5964624e834626f4ca666ec2f55a2fd0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1448089765
 GameObject:
   m_ObjectHideFlags: 0
@@ -46347,6 +47281,10 @@ PrefabInstance:
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_Name
       value: Blood_2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -46783,6 +47721,10 @@ PrefabInstance:
       value: Blood_3 (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -47108,6 +48050,10 @@ PrefabInstance:
       value: Blood_2 (13)
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -47207,7 +48153,7 @@ RectTransform:
   - {fileID: 1298570538}
   - {fileID: 1968664633}
   - {fileID: 1141441852}
-  - {fileID: 1426291335}
+  - {fileID: 984053959}
   - {fileID: 8744297}
   m_Father: {fileID: 1473901970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48807,6 +49753,10 @@ PrefabInstance:
       value: Blood_1 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -49038,6 +49988,143 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564200836}
   m_Mesh: {fileID: -1950577307805863904, guid: 2d72974df834482458edcc2929abc09a, type: 3}
+--- !u!1 &1565704026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565704027}
+  - component: {fileID: 1565704028}
+  m_Layer: 0
+  m_Name: Church
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565704027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565704026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -107.736, y: 37.75, z: 20.606}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 310741005}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1565704028
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565704026}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 06d2ffe69af46364893abeea27eb3f9b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 19.581886
+  MaxDistance: 50
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.3916377
+      value: 1
+      inSlope: -2.5544012
+      outSlope: -2.5544012
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.66263944
+      value: 0.50468445
+      inSlope: -0.8866499
+      outSlope: -0.8866499
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.41996858
+    - serializedVersion: 3
+      time: 1
+      value: 0.34482375
+      inSlope: -0.391794
+      outSlope: -0.391794
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1567047131
 GameObject:
   m_ObjectHideFlags: 0
@@ -50079,6 +51166,10 @@ PrefabInstance:
       value: Blood_2
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -50695,6 +51786,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51690,6 +52785,10 @@ PrefabInstance:
       value: Blood_3 (15)
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -51767,6 +52866,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -52862,6 +53965,10 @@ PrefabInstance:
       value: Blood_2 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -52938,6 +54045,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -53494,6 +54605,10 @@ PrefabInstance:
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_Name
       value: Blood_2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -56081,6 +57196,10 @@ PrefabInstance:
       value: Blood_5 (15)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -56353,6 +57472,10 @@ PrefabInstance:
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_Name
       value: Blood_1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -56931,6 +58054,10 @@ PrefabInstance:
       value: Blood_1 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -57173,6 +58300,10 @@ PrefabInstance:
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_Name
       value: Blood_2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -58053,6 +59184,10 @@ PrefabInstance:
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_Name
       value: Blood_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -59148,13 +60283,117 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 347172732987224811, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1974332618}
   m_SourcePrefab: {fileID: 100100000, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
 --- !u!4 &1974332616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8938895402682911442, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
   m_PrefabInstance: {fileID: 1974332615}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1974332617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 347172732987224811, guid: dcb58c3ed3957994b9c6d569aa4372e1, type: 3}
+  m_PrefabInstance: {fileID: 1974332615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1974332618
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974332617}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2834fd37866ae8a4585a877bfcac9ab7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1977385798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3427266609028263312, guid: bf129ad0705283c41bc5cbe8175fc351, type: 3}
@@ -59332,6 +60571,10 @@ PrefabInstance:
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_Name
       value: Blood_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 856944726045965031, guid: 7a720ef192e5812438bd9a54f8677d81, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -60762,6 +62005,10 @@ PrefabInstance:
       value: Blood_2 (12)
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -61243,6 +62490,10 @@ PrefabInstance:
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_Name
       value: Blood_5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -63392,6 +64643,10 @@ PrefabInstance:
       value: Blood_2 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933779479836883593, guid: 75400caf32cf52749be6bc83cfd17874, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -63539,6 +64794,10 @@ PrefabInstance:
       value: Blood_5 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3568390718409652994, guid: 061ca849f6c81e9458b092a9e7638f60, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -63615,6 +64874,10 @@ PrefabInstance:
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_Name
       value: Blood_3 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4990621055648839847, guid: f24ac40b6031d0043b2678f025e776f2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -64279,3 +65542,4 @@ SceneRoots:
   - {fileID: 2123660605}
   - {fileID: 1582316490}
   - {fileID: 1473901970}
+  - {fileID: 310741005}

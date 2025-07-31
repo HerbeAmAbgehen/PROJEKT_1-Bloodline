@@ -42,41 +42,38 @@ public class EndSceneLook : MonoBehaviour
     {
         StartCoroutine(FadeIn(FadeDuration));
 
-        yield return new WaitForSeconds(FadeDuration);
+        yield return new WaitForSeconds(FadeDuration+2);
 
         CamAnim.SetTrigger("LookToCat");
-
-        yield return new WaitForSeconds(LookToCat.length);
-
         CatAnim.SetTrigger("Look");
 
-        yield return new WaitForSeconds(CatLook.length);        
+        yield return new WaitForSeconds(CatLook.length+1);        
         
         CatAnim.SetTrigger("Scratch");
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
 
         CamAnim.SetTrigger("LookFromCat");
 
-        yield return new WaitForSeconds(LookFromCat.length+2);
+        yield return new WaitForSeconds(LookFromCat.length+4);
 
         StartCoroutine(FadeOut(FadeDuration));
     }
 
     private IEnumerator FadeIn(float duration)
     {
-
+        AudioListener.volume = 0;
         float t = 0f;
         while (t < duration)
 
         {
-
+            AudioListener.volume = Mathf.Clamp(AudioListener.volume += 0.01f, 0, 1);
             t += Time.deltaTime;
             CG.alpha = 1f - Mathf.Clamp01(t / duration);
             yield return null;
 
         }
-
+        AudioListener.volume = 1f;
         CG.alpha = 0f;
 
     }
@@ -88,13 +85,13 @@ public class EndSceneLook : MonoBehaviour
         while (t < duration)
 
         {
-
+            AudioListener.volume = Mathf.Clamp(AudioListener.volume -= 0.01f, 0, 1); ;
             t += Time.deltaTime;
             CG.alpha = Mathf.Clamp01(t / duration);
             yield return null;
 
         }
-
+        AudioListener.volume = 0;
         CG.alpha = 1f;
 
         Application.Quit();

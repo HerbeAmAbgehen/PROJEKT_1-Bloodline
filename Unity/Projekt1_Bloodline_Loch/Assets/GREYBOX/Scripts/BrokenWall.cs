@@ -17,6 +17,8 @@ public class BrokenWall : MonoBehaviour
 
     private BoxCollider BC;
 
+    private AudioSource Audio;
+
     private bool IsBroken = false;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class BrokenWall : MonoBehaviour
         CG = BlackImage.GetComponent<CanvasGroup>();
         MR = GetComponent<MeshRenderer>();
         BC = GetComponent<BoxCollider>();
+        Audio = GetComponent<AudioSource>();
 
         WallWhole.SetActive(true);
         WallBroken.SetActive(false);
@@ -36,6 +39,7 @@ public class BrokenWall : MonoBehaviour
     private IEnumerator BreakWall()
     {
         StartCoroutine(FadeOut(1));
+        Audio.Play();
         yield return new WaitForSeconds(1);
         WallWhole.SetActive(false);
         WallBroken.SetActive(true);
