@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndSceneLook : MonoBehaviour
 {
@@ -47,11 +48,11 @@ public class EndSceneLook : MonoBehaviour
         CamAnim.SetTrigger("LookToCat");
         CatAnim.SetTrigger("Look");
 
-        yield return new WaitForSeconds(CatLook.length+1);        
-        
+        yield return new WaitForSeconds(CatLook.length+1);
+        GetComponent<AudioSource>().Play();
         CatAnim.SetTrigger("Scratch");
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
 
         CamAnim.SetTrigger("LookFromCat");
 
@@ -94,6 +95,6 @@ public class EndSceneLook : MonoBehaviour
         AudioListener.volume = 0;
         CG.alpha = 1f;
 
-        Application.Quit();
+        SceneManager.LoadScene("Achievement");
     }
 }

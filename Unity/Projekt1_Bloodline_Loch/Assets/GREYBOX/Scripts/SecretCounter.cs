@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class SecretCounter : MonoBehaviour
 {
-    private int SecretsFound;
+    public int SecretsFound;
 
-    public void FoundSecret()
+    private void Start()
     {
-        SecretsFound++;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void FoundSecret(bool KnowsSecret)
+    {
+        if (!KnowsSecret)
+        {
+            SecretsFound++;
+        }
+        
         Debug.Log("Found a secret. Secrets found: " + SecretsFound);
     }
 }

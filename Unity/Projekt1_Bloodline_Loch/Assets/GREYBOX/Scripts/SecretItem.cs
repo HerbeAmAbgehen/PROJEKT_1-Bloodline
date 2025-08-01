@@ -20,11 +20,14 @@ public class SecretItem : MonoBehaviour
     public void ShowText()
     {
         StartCoroutine(TextTimer());
+        GameObject.Find("Secret_Counter").GetComponent<SecretCounter>().FoundSecret(KnowsSecret);
+        KnowsSecret = true;
     }
 
 
     private IEnumerator TextTimer()
     {
+        GetComponent<AudioSource>().Stop();
         Text.SetActive(true);
         yield return new WaitForSeconds(TextActiveTime);
         Text.SetActive(false);

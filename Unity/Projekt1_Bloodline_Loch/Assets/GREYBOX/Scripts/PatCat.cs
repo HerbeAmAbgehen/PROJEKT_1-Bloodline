@@ -11,6 +11,7 @@ public class PatCat : MonoBehaviour
     public GameObject PlayerCameraRoot;
     public GameObject PlayerPositionTarget;
     public GameObject Text;
+    public GameObject Barrier;
 
     public AnimationClip Pat;
     public AnimationClip Scratch;
@@ -53,7 +54,7 @@ public class PatCat : MonoBehaviour
 
     private IEnumerator CatPat()
     {
-        
+        GetComponent<AudioSource>().Play();
         CanBePatted=false;
         ArmMesh.enabled = true;
         Animator.SetTrigger("Pat");
@@ -94,6 +95,7 @@ public class PatCat : MonoBehaviour
     {
         MovePlayer();
         StartCoroutine(CatPat());
+        Barrier.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -16,6 +16,7 @@ TagManager:
   - GroundRock
   - GroundWood
   - GroundDirt
+  - CatBarrier
   layers:
   - Default
   - TransparentFX
