@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 5c0e2917aaeb3864187a88cb41714e12, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 30c4460d3046c7b4296f3f7880e9fa1c, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -12789,6 +12789,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Doorframe
       objectReference: {fileID: 0}
+    - target: {fileID: 299169375765019960, guid: 268f5d844d8a31c4caf76ea85ffebbb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 523403189738688320, guid: 268f5d844d8a31c4caf76ea85ffebbb4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 700406857940215197, guid: 268f5d844d8a31c4caf76ea85ffebbb4, type: 3}
       propertyPath: m_ScaleInLightmap
       value: 15
@@ -18697,7 +18705,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &280395094
 Transform:
@@ -33859,7 +33867,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &583583148
 Transform:
@@ -36035,7 +36043,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &635825104
 Transform:
@@ -42060,7 +42068,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &742178546
 Transform:
@@ -49660,7 +49668,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &851506371
 Transform:
@@ -65772,7 +65780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5483733445861191835, guid: 2f5c009fcb397b841a9a6b221ab51d9b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8648698983099265205, guid: 2f5c009fcb397b841a9a6b221ab51d9b, type: 3}
       propertyPath: m_LocalScale.x
@@ -65995,7 +66003,7 @@ GameObject:
   m_TagString: Brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &1145270520
 MeshRenderer:
@@ -101115,7 +101123,7 @@ GameObject:
   m_TagString: SceneChange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1689298448
 MonoBehaviour:
@@ -107603,7 +107611,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1800025350
 Transform:
@@ -133581,7 +133589,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2096064702
 Transform:
