@@ -6,6 +6,8 @@ public class SecretCounter : MonoBehaviour
 {
     public int SecretsFound;
 
+    public bool pattedRat;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);

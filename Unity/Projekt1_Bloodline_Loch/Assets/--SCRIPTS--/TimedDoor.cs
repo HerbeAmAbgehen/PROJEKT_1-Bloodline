@@ -57,6 +57,7 @@ public class TimedDoor : MonoBehaviour
 
     IEnumerator DoorTimer()
     {
+        Door.GetComponent<AudioSource>().Play();
         DoorOpen = true;
         yield return new WaitForSeconds(DoorOpenTime);
         DoorOpen = false;
@@ -67,6 +68,7 @@ public class TimedDoor : MonoBehaviour
     {
         StartCoroutine(DoorTimer());
         GetComponent<AudioSource>().Play();
+        GetComponent<Animator>().SetTrigger("Interaction");
     }
 
 }

@@ -59,7 +59,27 @@ public class RayCast : MonoBehaviour
                     SceneIcon.SetActive(false);
                 }
             }
-            if(hit.collider.tag == "Brick")
+
+            if (hit.collider.tag == "Rat")
+            {
+
+                PatRat PR = hit.collider.gameObject.GetComponent<PatRat>();
+                SecretCounter SC = GameObject.Find("Secret_Counter").GetComponent<SecretCounter>();
+
+                if (PR.CanBePatted)
+                {
+                    HandIcon.SetActive(true);
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        PR.PlayPat();
+                        HandIcon.SetActive(false);
+                        SC.pattedRat = true;
+                    }
+                }
+
+            }
+
+            if (hit.collider.tag == "Brick")
             {
                 BrokenWall BW = hit.collider.gameObject.GetComponent<BrokenWall>();
                 HandIcon.SetActive(true);
