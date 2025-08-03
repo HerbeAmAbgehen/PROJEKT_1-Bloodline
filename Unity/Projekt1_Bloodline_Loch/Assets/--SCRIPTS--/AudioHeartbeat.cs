@@ -22,6 +22,6 @@ public class AudioHeartbeat : MonoBehaviour
     {
         Distance = Cat.transform.position - player.transform.position;
 
-        Audio.pitch = Mathf.Clamp((1 * (10 / Distance.magnitude)), 0.5f, 3f);
+        Audio.pitch = Mathf.Clamp((1 * (10 / Distance.magnitude)), 0.5f, 2.3f);
     }
 }

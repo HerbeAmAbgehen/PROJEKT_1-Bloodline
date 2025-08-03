@@ -33,13 +33,14 @@ public class SceneChange : MonoBehaviour
         {
             Audio.Play(); 
         }
+        float maxVolume = GameObject.Find("Options_DDOL").GetComponent<GameSettings>().volume;
+        AudioListener.volume = maxVolume;
 
-        AudioListener.volume = 1f;
         float t = 0f;
         while (t < duration)
 
         {
-            AudioListener.volume = Mathf.Clamp(AudioListener.volume -= 0.01f, 0, 1);
+            AudioListener.volume = Mathf.Clamp(AudioListener.volume -= 0.01f, 0, maxVolume);
             t += Time.deltaTime;
             CG.alpha = Mathf.Clamp01(t / duration);
             yield return null;

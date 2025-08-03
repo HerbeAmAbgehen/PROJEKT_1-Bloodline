@@ -95,6 +95,7 @@ public class EndSceneLook : MonoBehaviour
         AudioListener.volume = 0;
         CG.alpha = 1f;
 
+        Destroy(GameObject.Find("---PAUSE MENU---"));
         SceneManager.LoadScene("Achievement");
     }
 }

@@ -41,7 +41,9 @@ public class PatRat : MonoBehaviour
         CanBePatted=false;
         ArmMesh.enabled = true;;
         ArmAnimator.SetTrigger("Pat");
-        yield return new WaitForSeconds(ArmPat.length);
+        yield return new WaitForSeconds(1.5f);
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(ArmPat.length - 1.5f);
         ArmAnimator.SetTrigger("Idle");
         ArmMesh.enabled=false;
         PC.gameObject.SetActive(true);

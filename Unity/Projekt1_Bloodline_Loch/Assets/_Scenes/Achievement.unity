@@ -432,7 +432,7 @@ RectTransform:
   m_GameObject: {fileID: 1049385805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1936231379}
@@ -651,11 +651,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22507ba39ccb4e44aac0de901438872e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SecretText: {fileID: 0}
-  RatText: {fileID: 0}
+  SecretText: {fileID: 1566610556}
+  RatText: {fileID: 1049385808}
   CG: {fileID: 133174421}
-  SecretCanva: {fileID: 0}
-  RatCanva: {fileID: 0}
+  SecretCanva: {fileID: 1566610558}
+  RatCanva: {fileID: 1049385807}
 --- !u!114 &1235855608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -920,7 +920,7 @@ RectTransform:
   m_GameObject: {fileID: 1566610554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1936231379}
@@ -950,9 +950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You found 0 of 7 secrets
-
-'
+  m_text: The secrets Counter isn'tworking!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f535ab3663c053e48925a08eb0947740, type: 2}
   m_sharedMaterial: {fileID: 7179662544608774019, guid: f535ab3663c053e48925a08eb0947740, type: 2}

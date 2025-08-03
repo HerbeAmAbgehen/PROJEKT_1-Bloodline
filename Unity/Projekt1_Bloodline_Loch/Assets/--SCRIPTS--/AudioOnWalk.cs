@@ -24,6 +24,8 @@ public class AudioOnWalk : MonoBehaviour
 
     private bool AudioIsPlaying;
 
+    private bool changedSteps;
+
     private float DefaultPitch;
 
     private float HighPitch;
@@ -59,33 +61,35 @@ public class AudioOnWalk : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("GroundWet"))
+        if (other.CompareTag("GroundWet") && !changedSteps)
         {
             PlayerAudio.clip = WetSteps;
             PlayerAudio.Play();
         }
-        if (other.CompareTag("GroundWater"))
+        if (other.CompareTag("GroundWater") && !changedSteps)
         {
             PlayerAudio.clip = WaterSteps;
             PlayerAudio.Play();
         }
-        if (other.CompareTag("GroundRock"))
+        if (other.CompareTag("GroundRock") && !changedSteps)
         {
             PlayerAudio.clip = RockSteps;
             PlayerAudio.Play();
         }
-        if (other.CompareTag("GroundWood"))
+        if (other.CompareTag("GroundWood") && !changedSteps)
         {
             PlayerAudio.clip = WoodSteps;
             PlayerAudio.Play();
         }
-        if (other.CompareTag("GroundDirt"))
+        if (other.CompareTag("GroundDirt") && !changedSteps)
         {
             PlayerAudio.clip = DirtSteps;
             PlayerAudio.Play();
         }
+
+        changedSteps = true;
     }
 
     private void OnTriggerExit(Collider other)
@@ -94,6 +98,8 @@ public class AudioOnWalk : MonoBehaviour
         {
             PlayerAudio.clip = DefaultSteps;
             PlayerAudio.Play();
+            changedSteps = false;
         }
+
     }
 }

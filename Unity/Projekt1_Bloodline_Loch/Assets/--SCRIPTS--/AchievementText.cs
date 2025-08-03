@@ -23,13 +23,13 @@ public class AchievementText : MonoBehaviour
     {
         SC = GameObject.Find("Secret_Counter").GetComponent<SecretCounter>();
 
-        if(SC.SecretsFound != 7)
+        if(SC.SecretsFound != 8)
         {
-            SecretText.text = "You found " + $"{SC.SecretsFound}" + " of 7 secrets!";
+            SecretText.text = "You found " + $"{SC.SecretsFound}" + " of 8 secrets!";
         }
-        else if (SC.SecretsFound > 7)
+        else if (SC.SecretsFound > 8)
         {
-            SecretText.text = "You found " + $"{SC.SecretsFound}" + " of 7 secrets! CHEATER!!";
+            SecretText.text = "You found " + $"{SC.SecretsFound}" + " of 8 secrets! CHEATER!!";
         }
         else
         {
@@ -64,6 +64,7 @@ public class AchievementText : MonoBehaviour
         AudioListener.volume = 0f;
         CG.alpha = 1f;
         Destroy(SC);
+        Destroy(GameObject.Find("Options_DDOL"));
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -76,7 +77,7 @@ public class AchievementText : MonoBehaviour
 
         {
             t += Time.deltaTime;
-            SecretCanva.alpha = Mathf.Clamp01(t / duration);
+            SecretCanva.alpha = 1 - Mathf.Clamp01(t / duration);
             yield return null;
 
         }

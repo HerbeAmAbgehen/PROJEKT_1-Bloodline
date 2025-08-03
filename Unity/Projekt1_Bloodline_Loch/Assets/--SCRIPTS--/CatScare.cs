@@ -21,6 +21,10 @@ public class CatScare : MonoBehaviour
 
     public GameObject BloodParticles;
 
+    public AudioSource BloodSound;
+
+    public SkinnedMeshRenderer MR;
+
     private CanvasGroup CGblack;
 
     private CanvasGroup CGred;
@@ -68,6 +72,9 @@ public class CatScare : MonoBehaviour
         yield return new WaitForSeconds(Cat_Jump.length / 4);
         killPlayer = true;
         BloodParticles.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        MR.enabled = false;
+        
 
         float t = 0f;
         while (t < duration)
@@ -95,6 +102,7 @@ public class CatScare : MonoBehaviour
         GetComponent<AudioSource>().Play();
         StartCoroutine(FadeScene(FadeDuration));
         GameObject.Find("heartbeat").GetComponent<AudioSource>().Stop();
+        BloodSound.Play();
         PC.enabled = false;
         Animator.SetTrigger("Jump");
         

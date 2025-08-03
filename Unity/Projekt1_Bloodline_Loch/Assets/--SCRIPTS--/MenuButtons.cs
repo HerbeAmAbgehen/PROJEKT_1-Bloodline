@@ -14,7 +14,7 @@ public class MenuButtons : MonoBehaviour
     public Button Return;
 
     public GameObject MainMenu;
-    public GameObject OptionsMenu;
+    public Canvas OptionsMenu;
 
     private AudioSource Audio;
 
@@ -23,6 +23,7 @@ public class MenuButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Destroy(GameObject.Find("---PAUSE MENU---"));
         Audio = GetComponent<AudioSource>();
 
         Play.onClick.AddListener(() => LoadGame());
@@ -57,12 +58,12 @@ public class MenuButtons : MonoBehaviour
         if (OptionsActive)
         {
             MainMenu.SetActive(false);
-            OptionsMenu.SetActive(true);
+            OptionsMenu.enabled = true;
         }
         else
         {
             MainMenu.SetActive(true);
-            OptionsMenu.SetActive(false);
+            OptionsMenu.enabled = false;
         }
     }
 
@@ -74,13 +75,13 @@ public class MenuButtons : MonoBehaviour
 
     private IEnumerator FadeScene(float duration)
     {
-
-        AudioListener.volume = 1f;
+        float maxVolume = GameObject.Find("Options_DDOL").GetComponent<GameSettings>().volume;
+        AudioListener.volume = maxVolume;
         float t = 0f;
         while (t < duration)
 
         {
-            AudioListener.volume = Mathf.Clamp(AudioListener.volume -= 0.01f, 0, 1);
+            AudioListener.volume = Mathf.Clamp(AudioListener.volume -= 0.005f, 0, maxVolume);
             t += Time.deltaTime;
             CG.alpha = Mathf.Clamp01(t / duration);
             yield return null;
@@ -93,13 +94,13 @@ public class MenuButtons : MonoBehaviour
 
     private IEnumerator FadeQuit(float duration)
     {
-
-        AudioListener.volume = 1f;
+        float maxVolume = GameObject.Find("Options_DDOL").GetComponent<GameSettings>().volume;
+        AudioListener.volume = maxVolume;
         float t = 0f;
         while (t < duration)
 
         {
-            AudioListener.volume = Mathf.Clamp(AudioListener.volume -= 0.01f, 0, 1);
+            AudioListener.volume = Mathf.Clamp(AudioListener.volume -= 0.005f, 0, maxVolume);
             t += Time.deltaTime;
             CG.alpha = Mathf.Clamp01(t / duration);
             yield return null;
